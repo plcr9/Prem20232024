@@ -1,636 +1,731 @@
 <!DOCTYPE html>
-<html lang="en">
+<lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Premier League Results 2023/2024</title>
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/navBar.css" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Premier League Results 2023/2024</title>
+        <link rel="stylesheet" href="../styles/style.css" />
+        <link rel="stylesheet" href="../styles/navBar.css" />
+    </head>
 
+    <body>
+        <nav>
+            <!--Arsenal Badge to the far left of the navbar-->
+            <a href="javascript:void(0);" id="ArsenalBadge">
+                <img src="../images/ArsenalBadge.png" alt="ArsenalBadge" />
+            </a>
+            <!--User Sign In-->
+            <a href="javascript:void(0);" id="nav-sign-in">
+                <i class="fas fa-user-circle"></i>
+                <div id="nav-sign-in-text">Sign In</div>
+                <div class="nav-line nav-blue"></div>
+            </a>
+            <!--Bell Icon-->
+            <a href="javascript:void(0);" id="nav-bell-icon">
+                <i class="fas fa-bell"></i>
+                <div class="nav-line nav-dark-blue"></div>
+            </a>
+            <!--Main Nav Here. On full widths-->
+            <section id="main-nav">
+                <a href="index.html" class="main-nav-entry" id="main-nav-home">
+                    <div>Home</div>
+                    <div class="nav-line nav-blue"></div>
+                </a>
+                <a href="results.html" class="main-nav-entry" id="main-nav-news">
+                    <div>Results</div>
+                    <div class="nav-line nav-red"></div>
+                </a>
+                <a href="matchscorers.html" class="main-nav-entry" id="main-nav-sport">
+                    <div>Match Scorers</div>
+                    <div class="nav-line nav-yellow"></div>
+                </a>
+                <a href="topscorers.html" class="main-nav-entry" id="main-nav-weather">
+                    <div>Top Scorers</div>
+                    <div class="nav-line nav-light-blue"></div>
+                </a>
+                <a href="countryscorers.html" class="main-nav-entry" id="main-nav-iplayer">
+                    <div>Country Scorers</div>
+                    <div class="nav-line nav-pink"></div>
+                </a>
+                <a href="scorelines.html" class="main-nav-entry" id="main-nav-sounds">
+                    <div>Scorelines</div>
+                    <div class="nav-line nav-orange"></div>
+                </a>
+                <a href="opponents.html" class="main-nav-entry" id="main-nav-cbbc">
+                    <div>Opponents</div>
+                    <div class="nav-line nav-green"></div>
+                </a>
+                <a href="managers.html" class="main-nav-entry" id="main-nav-cbeebies">
+                    <div>Managers</div>
+                    <div class="nav-line nav-yellow"></div>
+                </a>
+                <a href="javascript:void(0);" class="main-nav-entry" id="main-nav-more">
+                    <div>More</div>
+                    <i class="fas fa-caret-down"></i>
+                    <div class="nav-line nav-black"></div>
+                </a>
+            </section>
+            <!--Search-->
+            <a href="javascript:void(0);" id="nav-search">
+                <i class="fas fa-search"></i>
+                <div id="nav-search-text">Search</div>
+                <div class="nav-line nav-black"></div>
+            </a>
+        </nav>
+        <!--Extra drop down that opens up when user clicks on the more tab-->
+        <section id="more-nav">
+            <!--X that user clicks on to close the menu-->
+            <div id="more-nav-content">
+                <div id="cross-icon"><i class="fas fa-times"></i></div>
+                <a href="results.html">Results</a>
+                <a href="javascript:void(0);">Match Scorers</a>
+                <a href="topscorers.html">Top Scorers</a>
+                <a href="javascript:void(0);">Country Scorers</a>
+                <a href="scorelines.html">Scorelines</a>
+                <a href="javascript:void(0);">Opponents</a>
+                <a href="managers.html">Managers</a>
+                <a href="PremierLeagueeaguestats.html">Premier League Stats</a>
+                <a href="day.html">Day</a>
+                <a href="date.html">Date</a>
+                <a href="month.html">Month</a>
+                <a href="year.html">Year</a>
+                <a href="kickofftime.html">Kick Off Time</a>
+                <a href="owngoals.html">Own Goals</a>
+            </div>
+        </section>
+        <!--END OF NAVBAR. START OF MAIN PAGE-->
+        <div id="ArsenalTitle">
+            <div class="center-content title-text">
+                Premier League Results 2023-2024
+            </div>
+        </div>
 
-<table border="1" class="dataframe">
-    <thead>
-        <tr style="text-align: right;">
-            <th>MatchID</th>
-            <th>WeekID</th>
-            <th>Time</th>
-            <th>Day</th>
-            <th>Date</th>
-            <th>Month</th>
-            <th>Year</th>
-            <th>Venue</th>
-            <th>HomeTeam</th>
-            <th>HomeScore</th>
-            <th>AwayScore</th>
-            <th>AwayTeam</th>
-            <th>Outcome</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>20:00</td>
-            <td>Friday</td>
-            <td>11</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Turf Moor</td>
-            <td>Burnley</td>
-            <td>0</td>
-            <td>3</td>
-            <td>Manchester City</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>1</td>
-            <td>12:30</td>
-            <td>Saturday</td>
-            <td>12</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Emirates Stadium</td>
-            <td>Arsenal</td>
-            <td>2</td>
-            <td>1</td>
-            <td>Nottingham Forest</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>1</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>12</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Vitality Stadium</td>
-            <td>Bournemouth</td>
-            <td>1</td>
-            <td>1</td>
-            <td>West Ham United</td>
-            <td>Draw</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>1</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>12</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Amex Stadium</td>
-            <td>Brighton &amp; Hove Albion</td>
-            <td>4</td>
-            <td>1</td>
-            <td>Luton Town</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>1</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>12</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Goodison Park</td>
-            <td>Everton</td>
-            <td>0</td>
-            <td>1</td>
-            <td>Fulham</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>1</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>12</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Bramall Lane</td>
-            <td>Sheffield United</td>
-            <td>0</td>
-            <td>1</td>
-            <td>Crystal Palace</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>1</td>
-            <td>17:30</td>
-            <td>Saturday</td>
-            <td>12</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>St. James's Park</td>
-            <td>Newcastle United</td>
-            <td>5</td>
-            <td>1</td>
-            <td>Aston Villa</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>1</td>
-            <td>14:00</td>
-            <td>Sunday</td>
-            <td>13</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Gtech Community Stadium</td>
-            <td>Brentford</td>
-            <td>2</td>
-            <td>2</td>
-            <td>Tottenham Hotspur</td>
-            <td>Draw</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>1</td>
-            <td>16:30</td>
-            <td>Sunday</td>
-            <td>13</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Stamford Bridge</td>
-            <td>Chelsea</td>
-            <td>1</td>
-            <td>1</td>
-            <td>Liverpool</td>
-            <td>Draw</td>
-        </tr>
-        <tr>
-            <td>10</td>
-            <td>1</td>
-            <td>20:00</td>
-            <td>Monday</td>
-            <td>14</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Old Trafford</td>
-            <td>Manchester United</td>
-            <td>1</td>
-            <td>0</td>
-            <td>Wolverhampton Wanderers</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>2</td>
-            <td>20:00</td>
-            <td>Friday</td>
-            <td>18</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>City Ground</td>
-            <td>Nottingham Forest</td>
-            <td>2</td>
-            <td>1</td>
-            <td>Sheffield United</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>12</td>
-            <td>2</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>19</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Craven Cottage</td>
-            <td>Fulham</td>
-            <td>0</td>
-            <td>3</td>
-            <td>Brentford</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>2</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>19</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Anfield</td>
-            <td>Liverpool</td>
-            <td>3</td>
-            <td>1</td>
-            <td>Bournemouth</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>14</td>
-            <td>2</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>19</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Kenilworth Road</td>
-            <td>Luton Town</td>
-            <td>NaN</td>
-            <td>NaN</td>
-            <td>Burnley</td>
-            <td>NaN</td>
-        </tr>
-        <tr>
-            <td>15</td>
-            <td>2</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>19</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Molineux</td>
-            <td>Wolverhampton Wanderers</td>
-            <td>1</td>
-            <td>4</td>
-            <td>Brighton &amp; Hove Albion</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>16</td>
-            <td>2</td>
-            <td>17:30</td>
-            <td>Saturday</td>
-            <td>19</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Tottenham Hotspur Stadium</td>
-            <td>Tottenham Hotspur</td>
-            <td>2</td>
-            <td>0</td>
-            <td>Manchester United</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>17</td>
-            <td>2</td>
-            <td>20:00</td>
-            <td>Saturday</td>
-            <td>12</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Etihad Stadium</td>
-            <td>Manchester City</td>
-            <td>1</td>
-            <td>0</td>
-            <td>Newcastle United</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>18</td>
-            <td>2</td>
-            <td>14:00</td>
-            <td>Sunday</td>
-            <td>20</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Villa Park</td>
-            <td>Aston Villa</td>
-            <td>4</td>
-            <td>0</td>
-            <td>Everton</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>19</td>
-            <td>2</td>
-            <td>16:30</td>
-            <td>Sunday</td>
-            <td>20</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>London Stadium</td>
-            <td>West Ham United</td>
-            <td>3</td>
-            <td>1</td>
-            <td>Chelsea</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>20</td>
-            <td>2</td>
-            <td>20:00</td>
-            <td>Monday</td>
-            <td>21</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Selhurst Park</td>
-            <td>Crystal Palace</td>
-            <td>0</td>
-            <td>1</td>
-            <td>Arsenal</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>21</td>
-            <td>3</td>
-            <td>20:00</td>
-            <td>Friday</td>
-            <td>25</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Stamford Bridge</td>
-            <td>Chelsea</td>
-            <td>3</td>
-            <td>0</td>
-            <td>Luton Town</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>22</td>
-            <td>3</td>
-            <td>12:30</td>
-            <td>Saturday</td>
-            <td>26</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Vitality Stadium</td>
-            <td>Bournemouth</td>
-            <td>0</td>
-            <td>2</td>
-            <td>Tottenham Hotspur</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>23</td>
-            <td>3</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>26</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Emirates Stadium</td>
-            <td>Arsenal</td>
-            <td>2</td>
-            <td>2</td>
-            <td>Fulham</td>
-            <td>Draw</td>
-        </tr>
-        <tr>
-            <td>24</td>
-            <td>3</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>26</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Gtech Community Stadium</td>
-            <td>Brentford</td>
-            <td>1</td>
-            <td>1</td>
-            <td>Crystal Palace</td>
-            <td>Draw</td>
-        </tr>
-        <tr>
-            <td>25</td>
-            <td>3</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>26</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Goodison Park</td>
-            <td>Everton</td>
-            <td>0</td>
-            <td>1</td>
-            <td>Wolverhampton Wanderers</td>
-            <td>Lose</td>
-        </tr>
-        <tr>
-            <td>26</td>
-            <td>3</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>26</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Old Trafford</td>
-            <td>Manchester United</td>
-            <td>3</td>
-            <td>2</td>
-            <td>Nottingham Forest</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>27</td>
-            <td>3</td>
-            <td>17:30</td>
-            <td>Saturday</td>
-            <td>26</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Amex Stadium</td>
-            <td>Brighton &amp; Hove Albion</td>
-            <td>1</td>
-            <td>3</td>
-            <td>West Ham United</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>28</td>
-            <td>3</td>
-            <td>14:00</td>
-            <td>Sunday</td>
-            <td>27</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Turf Moor</td>
-            <td>Burnley</td>
-            <td>1</td>
-            <td>3</td>
-            <td>Aston Villa</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>29</td>
-            <td>3</td>
-            <td>14:00</td>
-            <td>Sunday</td>
-            <td>27</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>Bramall Lane</td>
-            <td>Sheffield United</td>
-            <td>1</td>
-            <td>2</td>
-            <td>Manchester City</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>30</td>
-            <td>3</td>
-            <td>16:30</td>
-            <td>Sunday</td>
-            <td>27</td>
-            <td>August</td>
-            <td>2023</td>
-            <td>St. James's Park</td>
-            <td>Newcastle United</td>
-            <td>1</td>
-            <td>2</td>
-            <td>Liverpool</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>31</td>
-            <td>4</td>
-            <td>20:00</td>
-            <td>Friday</td>
-            <td>1</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Kenilworth Road</td>
-            <td>Luton Town</td>
-            <td>1</td>
-            <td>2</td>
-            <td>West Ham United</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>32</td>
-            <td>4</td>
-            <td>12:30</td>
-            <td>Saturday</td>
-            <td>2</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Bramall Lane</td>
-            <td>Sheffield United</td>
-            <td>2</td>
-            <td>2</td>
-            <td>Everton</td>
-            <td>Draw</td>
-        </tr>
-        <tr>
-            <td>33</td>
-            <td>4</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>2</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Gtech Community Stadium</td>
-            <td>Brentford</td>
-            <td>2</td>
-            <td>2</td>
-            <td>Bournemouth</td>
-            <td>Draw</td>
-        </tr>
-        <tr>
-            <td>34</td>
-            <td>4</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>2</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Turf Moor</td>
-            <td>Burnley</td>
-            <td>2</td>
-            <td>5</td>
-            <td>Tottenham Hotspur</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>35</td>
-            <td>4</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>2</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Stamford Bridge</td>
-            <td>Chelsea</td>
-            <td>0</td>
-            <td>1</td>
-            <td>Nottingham Forest</td>
-            <td>Away Win</td>
-        </tr>
-        <tr>
-            <td>36</td>
-            <td>4</td>
-            <td>15:00</td>
-            <td>Saturday</td>
-            <td>2</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Etihad Stadium</td>
-            <td>Manchester City</td>
-            <td>5</td>
-            <td>1</td>
-            <td>Fulham</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>37</td>
-            <td>4</td>
-            <td>17:30</td>
-            <td>Saturday</td>
-            <td>2</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Amex Stadium</td>
-            <td>Brighton & Hove Albion</td>
-            <td>3</td>
-            <td>1</td>
-            <td>Newcastle United</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>38</td>
-            <td>4</td>
-            <td>14:00</td>
-            <td>Sunday</td>
-            <td>3</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Selhurst Park</td>
-            <td>Crystal Palace</td>
-            <td>3</td>
-            <td>2</td>
-            <td>Wolverhampton Wanderers</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>39</td>
-            <td>4</td>
-            <td>14:00</td>
-            <td>Sunday</td>
-            <td>3</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Anfield</td>
-            <td>Liverpool</td>
-            <td>3</td>
-            <td>0</td>
-            <td>Aston Villa</td>
-            <td>Home Win</td>
-        </tr>
-        <tr>
-            <td>40</td>
-            <td>4</td>
-            <td>16:30</td>
-            <td>Sunday</td>
-            <td>3</td>
-            <td>September</td>
-            <td>2023</td>
-            <td>Emirates Stadium</td>
-            <td>Arsenal</td>
-            <td>3</td>
-            <td>1</td>
-            <td>Manchester United</td>
-            <td>Home Win</td>
-        </tr>
-    </tbody>
-</table>
+        </div>
+        <script src="script.js"></script>
+    </body>
 
-</html>
+    <table border="1" class="dataframe">
+        <thead>
+            <tr style="text-align: left;">
+                <th>MatchID</th>
+                <th>WeekID</th>
+                <th>Time</th>
+                <th>Day</th>
+                <th>Date</th>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Venue</th>
+                <th>HomeTeam</th>
+                <th>HomeScore</th>
+                <th>AwayScore</th>
+                <th>AwayTeam</th>
+                <th>Outcome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>20:00</td>
+                <td>Friday</td>
+                <td>11</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Turf Moor</td>
+                <td>Burnley</td>
+                <td>0</td>
+                <td>3</td>
+                <td>Manchester City</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1</td>
+                <td>12:30</td>
+                <td>Saturday</td>
+                <td>12</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Emirates Stadium</td>
+                <td>Arsenal</td>
+                <td>2</td>
+                <td>1</td>
+                <td>Nottingham Forest</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>1</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>12</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Vitality Stadium</td>
+                <td>Bournemouth</td>
+                <td>1</td>
+                <td>1</td>
+                <td>West Ham United</td>
+                <td>Draw</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>12</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Amex Stadium</td>
+                <td>Brighton & Hove Albion</td>
+                <td>4</td>
+                <td>1</td>
+                <td>Luton Town</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>1</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>12</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Goodison Park</td>
+                <td>Everton</td>
+                <td>0</td>
+                <td>1</td>
+                <td>Fulham</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>1</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>12</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Bramall Lane</td>
+                <td>Sheffield United</td>
+                <td>0</td>
+                <td>1</td>
+                <td>Crystal Palace</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>1</td>
+                <td>17:30</td>
+                <td>Saturday</td>
+                <td>12</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>St. James's Park</td>
+                <td>Newcastle United</td>
+                <td>5</td>
+                <td>1</td>
+                <td>Aston Villa</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>1</td>
+                <td>14:00</td>
+                <td>Sunday</td>
+                <td>13</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Gtech Community Stadium</td>
+                <td>Brentford</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Tottenham Hotspur</td>
+                <td>Draw</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>1</td>
+                <td>16:30</td>
+                <td>Sunday</td>
+                <td>13</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Stamford Bridge</td>
+                <td>Chelsea</td>
+                <td>1</td>
+                <td>1</td>
+                <td>Liverpool</td>
+                <td>Draw</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>1</td>
+                <td>20:00</td>
+                <td>Monday</td>
+                <td>14</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Old Trafford</td>
+                <td>Manchester United</td>
+                <td>1</td>
+                <td>0</td>
+                <td>Wolverhampton Wanderers</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>2</td>
+                <td>20:00</td>
+                <td>Friday</td>
+                <td>18</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>City Ground</td>
+                <td>Nottingham Forest</td>
+                <td>2</td>
+                <td>1</td>
+                <td>Sheffield United</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>2</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>19</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Craven Cottage</td>
+                <td>Fulham</td>
+                <td>0</td>
+                <td>3</td>
+                <td>Brentford</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>2</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>19</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Anfield</td>
+                <td>Liverpool</td>
+                <td>3</td>
+                <td>1</td>
+                <td>Bournemouth</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>2</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>19</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Kenilworth Road</td>
+                <td>Luton Town</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>Burnley</td>
+                <td>NaN</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>2</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>19</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Molineux</td>
+                <td>Wolverhampton Wanderers</td>
+                <td>1</td>
+                <td>4</td>
+                <td>Brighton & Hove Albion</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>2</td>
+                <td>17:30</td>
+                <td>Saturday</td>
+                <td>19</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Tottenham Hotspur Stadium</td>
+                <td>Tottenham Hotspur</td>
+                <td>2</td>
+                <td>0</td>
+                <td>Manchester United</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>2</td>
+                <td>20:00</td>
+                <td>Saturday</td>
+                <td>12</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Etihad Stadium</td>
+                <td>Manchester City</td>
+                <td>1</td>
+                <td>0</td>
+                <td>Newcastle United</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>2</td>
+                <td>14:00</td>
+                <td>Sunday</td>
+                <td>20</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Villa Park</td>
+                <td>Aston Villa</td>
+                <td>4</td>
+                <td>0</td>
+                <td>Everton</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>2</td>
+                <td>16:30</td>
+                <td>Sunday</td>
+                <td>20</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>London Stadium</td>
+                <td>West Ham United</td>
+                <td>3</td>
+                <td>1</td>
+                <td>Chelsea</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>2</td>
+                <td>20:00</td>
+                <td>Monday</td>
+                <td>21</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Selhurst Park</td>
+                <td>Crystal Palace</td>
+                <td>0</td>
+                <td>1</td>
+                <td>Arsenal</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>3</td>
+                <td>20:00</td>
+                <td>Friday</td>
+                <td>25</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Stamford Bridge</td>
+                <td>Chelsea</td>
+                <td>3</td>
+                <td>0</td>
+                <td>Luton Town</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>3</td>
+                <td>12:30</td>
+                <td>Saturday</td>
+                <td>26</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Vitality Stadium</td>
+                <td>Bournemouth</td>
+                <td>0</td>
+                <td>2</td>
+                <td>Tottenham Hotspur</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>3</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>26</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Emirates Stadium</td>
+                <td>Arsenal</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Fulham</td>
+                <td>Draw</td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>3</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>26</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Gtech Community Stadium</td>
+                <td>Brentford</td>
+                <td>1</td>
+                <td>1</td>
+                <td>Crystal Palace</td>
+                <td>Draw</td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>3</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>26</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Goodison Park</td>
+                <td>Everton</td>
+                <td>0</td>
+                <td>1</td>
+                <td>Wolverhampton Wanderers</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>3</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>26</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Old Trafford</td>
+                <td>Manchester United</td>
+                <td>3</td>
+                <td>2</td>
+                <td>Nottingham Forest</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>3</td>
+                <td>17:30</td>
+                <td>Saturday</td>
+                <td>26</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Amex Stadium</td>
+                <td>Brighton & Hove Albion</td>
+                <td>1</td>
+                <td>3</td>
+                <td>West Ham United</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>3</td>
+                <td>14:00</td>
+                <td>Sunday</td>
+                <td>27</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Turf Moor</td>
+                <td>Burnley</td>
+                <td>1</td>
+                <td>3</td>
+                <td>Aston Villa</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>3</td>
+                <td>14:00</td>
+                <td>Sunday</td>
+                <td>27</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>Bramall Lane</td>
+                <td>Sheffield United</td>
+                <td>1</td>
+                <td>2</td>
+                <td>Manchester City</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>3</td>
+                <td>16:30</td>
+                <td>Sunday</td>
+                <td>27</td>
+                <td>August</td>
+                <td>2023</td>
+                <td>St. James's Park</td>
+                <td>Newcastle United</td>
+                <td>1</td>
+                <td>2</td>
+                <td>Liverpool</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>4</td>
+                <td>20:00</td>
+                <td>Friday</td>
+                <td>1</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Kenilworth Road</td>
+                <td>Luton Town</td>
+                <td>1</td>
+                <td>2</td>
+                <td>West Ham United</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>4</td>
+                <td>12:30</td>
+                <td>Saturday</td>
+                <td>2</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Bramall Lane</td>
+                <td>Sheffield United</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Everton</td>
+                <td>Draw</td>
+            </tr>
+            <tr>
+                <td>33</td>
+                <td>4</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>2</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Gtech Community Stadium</td>
+                <td>Brentford</td>
+                <td>2</td>
+                <td>2</td>
+                <td>Bournemouth</td>
+                <td>Draw</td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>4</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>2</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Turf Moor</td>
+                <td>Burnley</td>
+                <td>2</td>
+                <td>5</td>
+                <td>Tottenham Hotspur</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td>4</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>2</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Stamford Bridge</td>
+                <td>Chelsea</td>
+                <td>0</td>
+                <td>1</td>
+                <td>Nottingham Forest</td>
+                <td>Away Win</td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td>4</td>
+                <td>15:00</td>
+                <td>Saturday</td>
+                <td>2</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Etihad Stadium</td>
+                <td>Manchester City</td>
+                <td>5</td>
+                <td>1</td>
+                <td>Fulham</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td>4</td>
+                <td>17:30</td>
+                <td>Saturday</td>
+                <td>2</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Amex Stadium</td>
+                <td>Brighton & Hove Albion</td>
+                <td>3</td>
+                <td>1</td>
+                <td>Newcastle United</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>38</td>
+                <td>4</td>
+                <td>14:00</td>
+                <td>Sunday</td>
+                <td>3</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Selhurst Park</td>
+                <td>Crystal Palace</td>
+                <td>3</td>
+                <td>2</td>
+                <td>Wolverhampton Wanderers</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>39</td>
+                <td>4</td>
+                <td>14:00</td>
+                <td>Sunday</td>
+                <td>3</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Anfield</td>
+                <td>Liverpool</td>
+                <td>3</td>
+                <td>0</td>
+                <td>Aston Villa</td>
+                <td>Home Win</td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>4</td>
+                <td>16:30</td>
+                <td>Sunday</td>
+                <td>3</td>
+                <td>September</td>
+                <td>2023</td>
+                <td>Emirates Stadium</td>
+                <td>Arsenal</td>
+                <td>3</td>
+                <td>1</td>
+                <td>Manchester United</td>
+                <td>Home Win</td>
+            </tr>
+        </tbody>
+    </table>
+
+    </html>

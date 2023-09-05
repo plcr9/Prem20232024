@@ -10,4 +10,127 @@
     <link rel="stylesheet" href="../styles/navBar.css" />
 </head>
 
+<body>
+    <nav>
+        <!--PremierLeague Badge to the far left of the navbar-->
+        <a href="javascript:void(0);" id="PremierLeagueBadge">
+            <img src="../images/PremierLeagueBadge.png" alt="PremierLeagueBadge" />
+        </a>
+        <!--User Sign In-->
+        <a href="javascript:void(0);" id="nav-sign-in">
+            <i class="fas fa-user-circle"></i>
+            <div id="nav-sign-in-text">Sign In</div>
+            <div class="nav-line nav-blue"></div>
+        </a>
+        <!--Bell Icon-->
+        <a href="javascript:void(0);" id="nav-bell-icon">
+            <i class="fas fa-bell"></i>
+            <div class="nav-line nav-dark-blue"></div>
+        </a>
+        <!--Main Nav Here. On full widths-->
+        <section id="main-nav">
+            <a href="index.html" class="main-nav-entry" id="main-nav-home">
+                <div>Home</div>
+                <div class="nav-line nav-blue"></div>
+            </a>
+            <a href="results.html" class="main-nav-entry" id="main-nav-news">
+                <div>Results</div>
+                <div class="nav-line nav-red"></div>
+            </a>
+            <a href="matchscorers.html" class="main-nav-entry" id="main-nav-sport">
+                <div>Match Scorers</div>
+                <div class="nav-line nav-yellow"></div>
+            </a>
+            <a href="topscorers.html" class="main-nav-entry" id="main-nav-weather">
+                <div>Top Scorers</div>
+                <div class="nav-line nav-light-blue"></div>
+            </a>
+            <a href="countryscorers.html" class="main-nav-entry" id="main-nav-iplayer">
+                <div>Country Scorers</div>
+                <div class="nav-line nav-pink"></div>
+            </a>
+            <a href="scorelines.html" class="main-nav-entry" id="main-nav-sounds">
+                <div>Scorelines</div>
+                <div class="nav-line nav-orange"></div>
+            </a>
+            <a href="opponents.html" class="main-nav-entry" id="main-nav-cbbc">
+                <div>Opponents</div>
+                <div class="nav-line nav-green"></div>
+            </a>
+            <a href="managers.html" class="main-nav-entry" id="main-nav-cbeebies">
+                <div>Managers</div>
+                <div class="nav-line nav-yellow"></div>
+            </a>
+            <a href="javascript:void(0);" class="main-nav-entry" id="main-nav-more">
+                <div>More</div>
+                <i class="fas fa-caret-down"></i>
+                <div class="nav-line nav-black"></div>
+            </a>
+        </section>
+        <!--Search-->
+        <a href="javascript:void(0);" id="nav-search">
+            <i class="fas fa-search"></i>
+            <div id="nav-search-text">Search</div>
+            <div class="nav-line nav-black"></div>
+        </a>
+    </nav>
+    <!--Extra drop down that opens up when user clicks on the more tab-->
+    <section id="more-nav">
+        <!--X that user clicks on to close the menu-->
+        <div id="more-nav-content">
+            <div id="cross-icon"><i class="fas fa-times"></i></div>
+            <a href="results.html">Results</a>
+            <a href="javascript:void(0);">Match Scorers</a>
+            <a href="topscorers.html">Top Scorers</a>
+            <a href="javascript:void(0);">Country Scorers</a>
+            <a href="scorelines.html">Scorelines</a>
+            <a href="javascript:void(0);">Opponents</a>
+            <a href="managers.html">Managers</a>
+            <a href="premierleaguestats.html">Premier League Stats</a>
+            <a href="day.html">Day</a>
+            <a href="date.html">Date</a>
+            <a href="month.html">Month</a>
+            <a href="year.html">Year</a>
+            <a href="kickofftime.html">Kick Off Time</a>
+            <a href="owngoals.html">Own Goals</a>
+        </div>
+    </section>
+    <!--END OF NAVBAR. START OF MAIN PAGE-->
+    <div id="PremierLeagueTitle">
+        <div class="center-content title-text">
+            Premier League Goals, by Time of Goal 2023-2024
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <table border="1" class="dataframe">
+        <thead>
+            <tr style="text-align: left;">
+                <th>Time Goal Scored in minutes</th>
+                <th>Frequency</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>0</td>
+            </tr>
+</body>
+
 </html>
