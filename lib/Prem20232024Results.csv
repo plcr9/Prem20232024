@@ -339,9 +339,9 @@
 338,34,20:00,Tuesday,14,May,2024,Tottenham Hotspur Stadium,Tottenham Hotspur,L,L,Manchester City,Unknown
 339,34,19:45,Wednesday,15,May,2024,Amex Stadium,Brighton & Hove Albion,L,L,Chelsea,Unknown
 340,34,20:00,Wednesday,15,May,2024,Old Trafford,Manchester United,L,L,Newcastle United,Unknown
-341,35,12:30,Saturday,27,April,2024,London Stadium,West Ham United,L,L,Liverpool,Unknown
-342,35,15:00,Saturday,27,April,2024,Craven Cottage,Fulham,L,L,Crystal Palace,Unknown
-343,35,15:00,Saturday,27,April,2024,Old Trafford,Manchester United,L,L,Burnley,Unknown
+341,35,12:30,Saturday,27,April,2024,London Stadium,West Ham United,2,2,Liverpool,Draw
+342,35,15:00,Saturday,27,April,2024,Craven Cottage,Fulham,1,1,Crystal Palace,Draw
+343,35,15:00,Saturday,27,April,2024,Old Trafford,Manchester United,1,1,Burnley,Draw
 344,35,15:00,Saturday,27,April,2024,St. James's Park,Newcastle United,L,L,Sheffield United,Unknown
 345,35,15:00,Saturday,27,April,2024,Molineux,Wolverhampton Wanderers,L,L,Luton Town,Unknown
 346,35,17:30,Saturday,27,April,2024,Goodison Park,Everton,L,L,Brentford,Unknown
