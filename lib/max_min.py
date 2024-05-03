@@ -1,4 +1,4 @@
-import pandas as py
+import pandas as pd
 import numpy as np
 
 results = pd.read_csv("Prem20232024Results.csv")
