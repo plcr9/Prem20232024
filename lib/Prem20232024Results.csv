@@ -359,13 +359,13 @@
 358,36,14:00,Sunday,5,May,2024,Stamford Bridge,Chelsea,5,0,West Ham United,Home Win
 359,36,16:30,Sunday,5,May,2024,Anfield,Liverpool,4,2,Tottenham Hotspur,Home Win
 360,36,20:00,Monday,6,May,2024,Selhurst Park,Crystal Palace,4,0,Manchester United,Home Win
-361,37,12:30,Saturday,11,May,2024,Craven Cottage,Fulham,L,L,Manchester City,Unknown
-362,37,15:00,Saturday,11,May,2024,Vitality Stadium,Bournemouth,L,L,Brentford,Unknown
-363,37,15:00,Saturday,11,May,2024,Goodison Park,Everton,L,L,Sheffield United,Unknown
-364,37,15:00,Saturday,11,May,2024,St. James's Park,Newcastle United,L,L,Brighton & Hove Albion,Unknown
-365,37,15:00,Saturday,11,May,2024,Tottenham Hotspur Stadium,Tottenham Hotspur,L,L,Burnley,Unknown
-366,37,15:00,Saturday,11,May,2024,London Stadium,West Ham United,L,L,Luton Town,Unknown
-367,37,15:00,Saturday,11,May,2024,Molineux,Wolverhampton Wanderers,L,L,Crystal Palace,Unknown
-368,37,17:30,Saturday,11,May,2024,City Ground,Nottingham Forest,L,L,Chelsea,Unknown
+361,37,12:30,Saturday,11,May,2024,Craven Cottage,Fulham,0,4,Manchester City,Away Win
+362,37,15:00,Saturday,11,May,2024,Vitality Stadium,Bournemouth,1,2,Brentford,Away Win
+363,37,15:00,Saturday,11,May,2024,Goodison Park,Everton,1,0,Sheffield United,Home Win
+364,37,15:00,Saturday,11,May,2024,St. James's Park,Newcastle United,1,1,Brighton & Hove Albion,Draw
+365,37,15:00,Saturday,11,May,2024,Tottenham Hotspur Stadium,Tottenham Hotspur,2,1,Burnley,Home Win
+366,37,15:00,Saturday,11,May,2024,London Stadium,West Ham United,3,1,Luton Town,Home Win
+367,37,15:00,Saturday,11,May,2024,Molineux,Wolverhampton Wanderers,1,3,Crystal Palace,Away Win
+368,37,17:30,Saturday,11,May,2024,City Ground,Nottingham Forest,2,3,Chelsea,Away Win
 369,37,16:30,Sunday,12,May,2024,Old Trafford,Manchester United,L,L,Arsenal,Unknown
 370,37,20:00,Monday,13,May,2024,Villa Park,Aston Villa,L,L,Liverpool,Unknown
