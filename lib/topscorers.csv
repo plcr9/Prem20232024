@@ -1,7 +1,8 @@
 ID,Player,Country,Continent,Team,TotalGoals,Penalties,TotalHauls,TotalHattricks,TotalBraces,TotalHomeGoals,TotalAwayGoals
-1,Erling Haaland,Norway,Europe,Manchester City,27
-2,Cole Palmer,England,Europe,Chelsea,22
-3,Alexander Isak,Sweden,Europe,Newcastle United,21
-4,Ollie Watkins,England,Europe,Aston Villa,19
-5,Phil Foden,England,Europe,Manchester City,19
-6,Dominic Solanke,England,Europe,Bournemouth,19
+1,Erling Haaland,Norway,Europe,Manchester City,27,7,1,1,5,15,12
+2,Cole Palmer,England,Europe,Chelsea,22,9,1,1,2,16,6
+3,Alexander Isak,Sweden,Europe,Newcastle United,21,5,0,0,5,14,7
+4,Ollie Watkins,England,Europe,Aston Villa,19,0,0,1,3,9,10
+5,Phil Foden,England,Europe,Manchester City,19,0,0,2,3,10,9
+6,Dominic Solanke,England,Europe,Bournemouth,19,2,0,1,1,10,9
+7,Mohamed Salah,Egypt,Africa,Liverpool,18,5,0,0,4,13,5
